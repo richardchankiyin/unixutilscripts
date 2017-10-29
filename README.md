@@ -7,3 +7,4 @@ there are some unix util scripts for HK specific application like stock quote an
 - whatismyip.sh checking your IPv4 and IPv6
 - index_quote.sh show HSI, HSCEI and VHSI index
 - push2slack_wh.sh using slack webhook to push notification to slack
+- ccy_quote.sh <ccypair e.g. EURUSD) will return current rate
