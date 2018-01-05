@@ -7,6 +7,6 @@ do
  header="$(echo "$content" | grep -m$x '^Date\/Month' | tail -1)"
  echo  $header
  echo "-----------------------------------"
- forecast=$(echo "$content" | grep -A 6 "$header")
+ forecast=$(echo "$content" | grep -A 8 "$header")
  echo $forecast  $cartoon
 done
