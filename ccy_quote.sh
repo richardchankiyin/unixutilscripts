@@ -1,2 +1,2 @@
 echo "from bloomberg:"
-curl -s "https://www.bloomberg.com/markets/api/quote-page/$1%3ACUR" | sed -e 's/\"price\"/\'$'\n\"price\"/g' | grep '^"price":[0-9]' | cut -d',' -f1 | cut -d':' -f2
+curl -s "https://www.bloomberg.com/markets/api/quote-page/$1%3ACUR" -H 'Connection: keep-alive' -H 'Cache-Control: max-age=0' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' | sed -e 's/\"price\"/\'$'\n\"price\"/g' | grep '^"price":[0-9]' | cut -d',' -f1 | cut -d':' -f2
