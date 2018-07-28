@@ -11,3 +11,4 @@ there are some unix util scripts for HK specific application like stock quote an
 - ccy_quote.sh <ccypair e.g. EURUSD) will return current rate
 - publicholiday.sh <Year> will return the hk public holiday in that year
 - isendofmonth.sh will check today is end of month or not. If yes, display "Y" and else "N"
+- dateadjust.sh will have a cross platform date adjustment result with output as format %Y%m%d 
