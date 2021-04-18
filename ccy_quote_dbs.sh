@@ -22,8 +22,8 @@ c+="${!m}"
 #echo "$c"
 
 if [ $againstccy == "HKD" ]; then 
-curl -s "https://www.dbs.com.hk/hk-rates-api/v1/api/hkrates/latestForexRates" | sed 's/{/\'$'\n/g' | sed 's/}/\'$'\n/g' | grep -i "$c" | awk -F ',|:' '{print $2,$6,$4}' | sed 's/"//g'
+curl -s "https://www.dbs.com.hk/hk-rates-api/v1/api/hkrates/latestForexRates" --compressed | sed 's/{/\'$'\n/g' | sed 's/}/\'$'\n/g' | grep -i "$c" | awk -F ',|:' '{print $2,$6,$4}' | sed 's/"//g'
 else
-curl -s "https://www.dbs.com.hk/hk-rates-api/v1/api/hkrates/latestForexRates" | sed 's/{/\'$'\n/g' | sed 's/}/\'$'\n/g' | grep -i "$c" | awk -F ',|:' '{print $2,$8,$10}' | sed 's/"//g'
+curl -s "https://www.dbs.com.hk/hk-rates-api/v1/api/hkrates/latestForexRates" --compressed | sed 's/{/\'$'\n/g' | sed 's/}/\'$'\n/g' | grep -i "$c" | awk -F ',|:' '{print $2,$8,$10}' | sed 's/"//g'
 fi
 
