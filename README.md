@@ -7,7 +7,7 @@ there are some unix util scripts for HK specific applications like stock quote a
 - hko_weather_f.sh coming 9 days HK weather forecast
 - whatismyip.sh checking your IPv4 and IPv6
 - index_quote.sh show HSI, HSCEI index
-- index_quote_us.sh show DJI, S&P500 and NASDAQ (deprecated)
+- index_quote_us.sh show DJI, S&P500 and NASDAQ (resumed on 20210516)
 - push2slack_wh.sh using slack webhook to push notification to slack
 - ccy_quote.sh <ccypair e.g. EURUSD) will return current rate
 - ccy_quote_dbs.sh <ccy> <hkd/usd> will return fx rate against hkd/usd based on dbs hk quotation
