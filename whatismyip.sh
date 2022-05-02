@@ -1,1 +1,1 @@
-curl -s 'https://www.whatismyip.com/' | grep "^My Public IPv4" | awk -F '>|<' '{print $5}'
+curl -s 'https://api.whatismyip.com/wimi.php' -H 'authority: api.whatismyip.com'  -H 'accept: */*' -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' -H 'origin: https://www.whatismyip.com' -H 'referer: https://www.whatismyip.com/' --compressed | awk -F ',|:' '{print $2}' | sed "s/\"//g"
