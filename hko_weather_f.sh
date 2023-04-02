@@ -1,4 +1,4 @@
-content=$(curl -s http://www.hko.gov.hk/textonly/v2/forecast/nday.htm --compressed)
+content=$(curl -s https://www.hko.gov.hk/textonly/v2/forecast/nday.htm --compressed)
 
 # get cartoon and then related forecast of that day
 for ((x=1;x<10;x++))
